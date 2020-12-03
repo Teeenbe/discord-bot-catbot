@@ -4,6 +4,12 @@ const bot = new Discord.Client();
 
 bot.login(process.env.TOKEN);
 
+bot.once("ready", () =>
+  bot.guilds.cache
+    .get("624628020937883690")
+    .send("Running and ready to serve some CATS!")
+);
+
 const getCatImage = async () => {
   const res = await axios.get("https://api.thecatapi.com/v1/images/search");
   const { url } = res.data[0];
