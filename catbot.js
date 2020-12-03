@@ -17,7 +17,7 @@ const getCatImage = async () => {
 };
 
 bot.on("message", async (msg) => {
-  if (msg.content === "|cat" && msg.guild.id === "744439118968127519") {
+  if (msg.content === "|cat") {
     const catImage = await getCatImage();
     msg.channel.send(catImage);
   }
