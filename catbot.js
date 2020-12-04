@@ -9,7 +9,7 @@ bot.once("ready", () => {
   bot.channels.cache
     .get("624628020937883690")
     .send("Running and ready to serve some CATS!");
-  bot.user.setActivity("CATS!");
+  bot.user.setActivity("with CATS!");
 });
 
 const getCatImage = async () => {
