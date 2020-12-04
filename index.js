@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const axios = require("axios");
+
 const bot = new Discord.Client();
 
 bot.login(process.env.TOKEN);

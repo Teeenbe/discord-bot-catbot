@@ -4,7 +4,7 @@
   "description": "Sends a cat image in the Discord channel when the |cat command is used.",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config catbot.js",
+    "start": "node -r dotenv/config index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
