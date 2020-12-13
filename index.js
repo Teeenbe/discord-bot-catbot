@@ -27,7 +27,7 @@ bot.on("message", async (msg) => {
   }
 
   const args = msg.content.slice(prefix.length).split(/ +/);
-  const commandName = args.shift.toLowerCase();
+  const commandName = args.shift().toLowerCase();
 
   const petImage = await getPetImage(commandName);
   msg.channel.send(petImage);
