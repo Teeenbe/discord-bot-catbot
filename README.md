@@ -12,4 +12,4 @@ Send the message `|cat` or `|dog` in a Discord channel and the bot will send an 
 
 ### How
 
-It uses the axios module to send a GET request within Node to ![TheCatAPI](https://thecatapi.com/) or ![TheDogAPI](https://thedogapi.com/), which returns a URL, amongst other things. The bot listens for `message` events, conditionally calls `getPetImage` if the message matches the command, `|cat` or `|dog`, and then sends its own message containing the URL, which Discord natively displays as an image.
+It uses the axios module to send a GET request within Node to [TheCatAPI](https://thecatapi.com/) or [TheDogAPI](https://thedogapi.com/), which returns a URL, amongst other things. The bot listens for `message` events, conditionally calls `getPetImage` if the message matches the command, `|cat` or `|dog`, and then sends its own message containing the URL, which Discord natively displays as an image.
