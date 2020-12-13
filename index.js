@@ -25,12 +25,16 @@ bot.on("message", async (msg) => {
   if (!msg.content.startsWith(prefix) || msg.author.bot) {
     return;
   }
+  try {
+    const args = msg.content.slice(prefix.length).split(/ +/);
+    const commandName = args.shift().toLowerCase();
 
-  const args = msg.content.slice(prefix.length).split(/ +/);
-  const commandName = args.shift().toLowerCase();
-
-  if (commandName === "cat" || commandName === "dog") {
-    const petImage = await getPetImage(commandName);
-    msg.channel.send(petImage);
+    if (commandName === "cat" || commandName === "dog") {
+      const petImage = await getPetImage(commandName);
+      msg.channel.send(petImage);
+    }
+  } catch (err) {
+    console.log(err);
+    bot.channels.cache.get("624628020937883690").send(err);
   }
 });
